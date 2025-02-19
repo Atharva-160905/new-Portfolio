@@ -355,11 +355,28 @@ article .icon {
 }
 
 /* PROJECTS SECTION */
-#changed{
-  position:relative;
-  display:block;
-  
+#changed {
+  /* Make the parent a flex container if you want them side by side */
+  display: flex;
+  flex-direction: column; /* or row, depending on how you want them stacked */
+  align-items: center;    /* centers items horizontally */
+  gap: 2rem;             /* spacing between rows/columns */
 }
+
+/* Then, if you have an inner container for your cards: */
+#changed .experience-details-container {
+  display: flex;
+  flex-wrap: wrap;       /* allows wrapping to the next line on smaller screens */
+  justify-content: center;
+  gap: 2rem;
+}
+
+#changed .details-container {
+  flex: 1 1 250px;       /* each card gets a minimum width */
+  max-width: 300px;      /* sets a maximum width for each card */
+  margin: 0 auto;        /* centers each card if there's extra space */
+}
+
 .color-container {
   border-color: rgb(163, 163, 163);
   background: rgb(250, 250, 250);
