@@ -357,6 +357,7 @@ article .icon {
 /* PROJECTS SECTION */
 #changed {
  position: relative; 
+  display: contents;
 }
 
 
